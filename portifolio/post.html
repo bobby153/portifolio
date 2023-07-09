@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akanksh | Portifolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/eae4ec021e.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+ <div id="header">
+    
+        <div class="container">
+    
+            <nav>
+               
+              <div ><img src="photos/modium-1.png" class="logo"></div> 
+                <h1>Portifolio <span>.</span></h1>
+                <ul>
+                    <li><a href="#header">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#contact">contact</a>               
+
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-text">
+              <strong>  <p>UG in Mechanical engineering. <br> Web dev.<br>CadM.</p> </strong> 
+                &nbsp;
+                <h1> Hey ,  I am <span>Akanksh</span> <br> Modium </h1>
+            </div>
+
+        </div> 
+</div>
+<!---about-----  -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="photos/pexels-andrea-piacquadio-3818903.jpg" alt="automobile mechanic">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me </h1>
+            <p> I am student at JNTU kakinada currently in my sophmore year of my engieering under-graduation programme, 
+                majoring in mechanical engineering. Im more interested in mechanical-computer science fusion models 
+                specifically Artificial-intelligence , machine-learning
+                ,internet-of-things 
+            </p>
+            <div class="tab-titles">
+                <p class="tab-links active-link"onclick="opentab('skills')"> skills</p>
+                <p class="tab-links"onclick="opentab('experience')">experience</p>
+                <p class="tab-links"onclick="opentab('education')">education</p>
+
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>web-dev</span><br> frontend web deve</li>
+                    <li><span>vehicle-maintainence</span><br>  have thorough knowledge in  theory & practiles of vehicle-maintainence sector</li>
+                   <li><span>soft-skills</span><br> public-speaking, debating,JAM sessions, Proactive</li>
+                </ul>
+            </div>
+            <div class="tab-contents"id="experience">
+                <ul>
+                    <li><span>may 2022- aug 2022<br> june 2023 - current</span><br> actively pursued Grade-A level training in a automitve car garage</li>
+                    <li><span>Hindustan shipyard limited </span><br>study & research on various economical & engineering perspectives of ship building (specifically russian-built-indian-submarines)</li>
+                    <li><span>mognite</span><br> worked as digital marketing intern- produced as-ideas (organic marketing)regarding personal finance</li>
+                </ul>
+            </div>
+            <div class="tab-contents"id="education">
+                <ul>
+                    <li><span>2021-2025(currently pursuing)</span><br> B.tech in ME at UCEK-JNTU-kakinada</li>
+                    <li><span>2018-2020</span><br>  Fiitjee junior college , Vishakapatnam</li>
+                    <li><span>soft-skills</span><br> Ravindra Bharathi high school, Vishakapatnam</li>
+                </ul>
+            </div>                        
+        </div>
+    </div>
+
+</div>
+<div id=contact>
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">contact me </h1>
+                <p> <i class="fas fa-paper-plane"> </i>akankshmodium@gmail.com</p>
+                <p> <i class="fa-solid fa-phone"></i> 7842545636</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/akanksh-modium-366630229/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/bobby153"><i class="fab fa-github"></i></a>
+                    <a href="akankshmodium@yahoo.com"><i class="fab fa-yahoo "></i></a>
+                </div>
+               
+            </div>
+            <a href="" download class="btn">Download Website Code</a>
+            
+             </div>
+             <div class="contact-right">
+                <form name='submit-to-google-sheet'>
+                    <input type="text" name="name" placeholder="your name " required>
+                    <input type="mail" name="mail" placeholder="your mail " required>
+                    <textarea name="message" rows="7" name="message" placeholder="your message"></textarea>
+                    <button type="submit" class="btn btn1">submit</button>
+
+
+
+                </form>
+                <span id="msg">hello</span>
+
+             </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname)
+    
+        for(tablink of tablinks){
+        tablink.classlist.remove("active-link")
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classlist.remove("active-tab")
+    }
+        event.currentTarget.classlist.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+
+   
+</script>
+
+<form name="submit-to-google-sheet">
+    <input name="email" type="email" placeholder="Email" required>
+    <button type="submit">Send</button>
+  </form>
+  
+  <script>
+    const scriptURL = '<https://script.google.com/macros/s/AKfycbxMW_YkSVIAC4XqVFsAhSBHIh8kTwBoRGBmXEJvD16CeGmXKuS1eKsbOmFqRlY5S4HW_Q/exec>'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    
+</body>
+</html>

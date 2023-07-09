@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: black;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(photos/pexels-markus-spiske-1679719.jpg);
+    background-size:cover;
+    background-position: center;
+    
+}
+.logo{
+    size: 80%;
+    height: 220px;
+    width: 220px;
+    padding: 0% 2px;
+
+    
+    
+}
+.container{
+    padding: 10px 10%;
+}
+.container h1 span{
+    color: #9976FF;
+}
+ul{
+   margin: 0;
+   position: right ;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+h1{
+    size: 50px;
+    font-size: 90px;
+    position: left;
+    padding-left: 3px;
+
+}
+
+ nav ul li
+ {
+    display: inline-block;
+    list-style: none;
+    margin: 10PX 20px;
+   
+ }
+ nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+   
+ }
+ nav ul li a::after{
+    content: ' ';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+
+ }
+ nav ul li a:hover::after {
+    width: 100%;
+ }
+ .header-text{
+    size: 40px;
+    margin-top: 5%;
+    font-size: 30px;
+    color: #fff;
+    }
+.header-text h1{
+    size: 80px;
+    margin-top: 0px;
+    margin-left: 30px 
+    ;
+}
+.logo{
+    float: left;
+}
+.header-text h1 span{
+    color: red;
+}
+
+.header-text h1 p{
+    color: #9976FF;
+}
+/*-------------------about----------------*/
+
+#about{
+    padding: 120px 0 ;
+    color: #ababab;
+
+}
+.row
+{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap
+    
+
+}
+.about-col-1{
+    flex-basis: 37%;
+
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 10px;
+}
+.about-col-2{
+    flex-basis: 60%;
+
+}
+
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+
+
+}
+.tab-links
+{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative ;
+}
+
+
+.tab-links ::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 36%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;}
+.tab-contents ul li span{
+
+        color: #b54769;
+        font-size: 18px;
+}
+.tab-contents{
+    display:none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+
+
+/*----------contact-------------*/
+ 
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+     color: #fff;   
+    font-family: 'Poppins' , sans-serif;}
+    
+.sub-title h3{
+    font-size:25px ;
+    font-weight: 200;
+    color: #fff;
+    font-style: oblique;
+
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: 
+    none;
+    font-size: 30px;
+    margin-top: 15px;
+    color: #ababab;
+    display: 
+    inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #9976FF;
+    transform: translate(-4px);
+}
+.btn{
+   
+    display:block;
+    margin: 100px;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 
+    6px;
+    text-decoration:none;
+    color: rgb(179, 230, 40);
+    transition:  0.5s
+    
+    
+    
+}
+.btn:hover{
+    background: #ff004f;
+    
+}
+.btn.btn1{
+    margin: 1px;
+    background-color: #9976FF;
+
+    
+    
+}
+.btn.btn1:hover{
+    
+    transform: translate(-4px);
+}
+.contact-left
+{
+    flex-basis: 35%;
+
+}
+.contact-right
+{
+    flex-basis: 60%;
+}
+.contact-left p{
+ margin-top: 40px   ;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px ;
+}
+
+.contact-right form
+{
+    width: 100%;
+
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: rgb(59, 20, 20);
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    border-radius:  6px; 
+    font-size: 18px;
+
+}
+#msg{
+    
+    margin-top: 4px;
+    display: block;
+    padding-left: 50px;
+}
+
+
+
+
+
+
